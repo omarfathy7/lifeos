@@ -1,0 +1,101 @@
+name: life_os
+description: "Life.OS — Your life, told as a story."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.11.4 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ── State Management ──
+  flutter_bloc: ^9.1.1
+  bloc: ^9.1.1
+
+  # ── Dependency Injection ──
+  get_it: ^8.0.3
+
+  # ── Navigation ──
+  go_router: ^15.1.2
+
+  # ── Firebase ──
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.5.2
+  cloud_firestore: ^5.6.6
+
+  # ── AI (Gemini) ──
+  google_generative_ai: ^0.4.6
+
+  # ── Google Sign In ──
+  google_sign_in: ^6.2.2
+
+  # ── Fonts ──
+  google_fonts: ^6.2.1
+
+  # ── Local Storage ──
+  shared_preferences: ^2.5.5
+  flutter_secure_storage: ^9.2.4
+
+  # ── Notifications (Prayer Times + Quests) ──
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+
+  # ── Prayer Times ──
+  adhan: 2.0.0+1
+
+  # ── UI Utilities ──
+  shimmer: ^3.0.0
+  lottie: ^3.3.1  # تم التصحيح من Lottie إلى lottie
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.0.15
+  percent_indicator: ^4.2.5
+
+  # ── Utils ──
+  intl: ^0.20.2
+  equatable: ^2.0.7
+  dartz: ^0.10.1 # تم التأكد من أنها بالـ z
+  connectivity_plus: ^6.1.3
+  package_info_plus: ^8.3.0
+
+  # ── Environment ──
+  flutter_dotenv: ^5.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  bloc_test: ^10.0.0
+  mocktail: ^1.0.4
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - .env
+
+  fonts:
+    - family: Orbitron # تم التصحيح ليتوافق مع اسم ملفات الـ Assets
+      fonts:
+        - asset: assets/fonts/Orbitron-Regular.ttf
+        - asset: assets/fonts/Orbitron-Bold.ttf
+          weight: 700
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/helmet_logo.png"
+  adaptive_icon_background: "#0D0D0F"
+  adaptive_icon_foreground: "assets/images/helmet_logo.png"
+
+flutter_native_splash:
+  color: "#0D0D0F"
+  android_12:
+    color: "#0D0D0F"
+  fullscreen: true
